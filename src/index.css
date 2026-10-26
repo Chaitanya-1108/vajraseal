@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --brand-navy: #0e3c63;
+  --brand-navy-dark: #092640;
+  --brand-orange: #e66827;
+  --brand-cyan: #79d7f7;
+  --brand-cyan-light: #e0f6fe;
+}
+
+/* Local Devanagari Font embedding for reliable offline & image export rendering */
+@font-face {
+  font-family: 'Noto Sans Devanagari';
+  src: url('/fonts/NotoSansDevanagari-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans Devanagari';
+  src: url('/fonts/NotoSansDevanagari-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Devanagari font helper */
+.font-devanagari {
+  font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print specific styles */
+@media print {
+  body {
+    background: transparent !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
